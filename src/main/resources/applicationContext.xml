@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--    Link to File with some values-->
+    <context:property-placeholder location="classpath:myApp.properties"/>
 
     <!--    creating bean with LINK = id + set class.path to this object = Dog -->
 
@@ -22,13 +24,13 @@
 
     </bean>
 
-    <!--Setting Using setters in Bean Value in his fields  -->
+    <!--Setting Using setters in Bean Value in his fields from File  -->
 
     <bean id="myPerson"
           class="org.spring.Person">
         <property name="pet" ref="myPetCat"/>
-        <property name="age" value="12"/>
-        <property name="name" value="12"/>
+        <property name="age" value="${person.age}"/>
+        <property name="name" value="${person.name}"/>
 
     </bean>
 
