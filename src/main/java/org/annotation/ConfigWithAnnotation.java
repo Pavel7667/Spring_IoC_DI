@@ -15,7 +15,8 @@ public class ConfigWithAnnotation {
         // call Bean "personBean" with seated another Bean "catBean"
 
         Person person =  context.getBean("personBean", Person.class);
-        person.callYourPet();
+
+        System.out.println(person);
 
         context.close();
     }

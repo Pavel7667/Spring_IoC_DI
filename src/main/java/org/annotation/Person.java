@@ -2,6 +2,7 @@ package org.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("personBean")
@@ -10,7 +11,10 @@ public class Person {
     //    @Autowired
 //    @Qualifier("dogBean")
     private Pet pet;
+
+    @Value("Set default value don`t using setters")
     private String name;
+    @Value("123456789")
     private int age;
 
 //    @Autowired work Single
