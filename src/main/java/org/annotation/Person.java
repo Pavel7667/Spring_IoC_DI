@@ -1,5 +1,9 @@
 package org.annotation;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("personBean")
 public class Person {
 
     private Pet pet;
@@ -15,8 +19,12 @@ public class Person {
         System.out.println("Detect message Person");
     }
 
-    // pet -> setPet
-    // ref pet = Spring magick = set + ref(pet->Pet) = setPet
+    /**
+     * Change XML_Configuration to @Annotation_Configuration
+     * Here we set in Bean "personBean" any Bean with Pet implementation
+     * @param pet
+     */
+    @Autowired
     public void setPet(Pet pet) {
         this.pet = pet;
     }

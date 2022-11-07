@@ -1,5 +1,6 @@
 package org.annotation;
 
+import org.spring.Pet;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ConfigWithAnnotation {
@@ -11,8 +12,10 @@ public class ConfigWithAnnotation {
                         ("applicationContextForAnnotion.xml");
 
 
-        // call Bean catBean
-        Cat cat = context.getBean("catBean",Cat.class);
+        // call Bean "personBean" with seated another Bean "catBean"
+
+        Person person =  context.getBean("personBean", Person.class);
+        person.callYourPet();
 
         context.close();
     }
