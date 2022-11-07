@@ -9,9 +9,7 @@
 
 
 <!--    Add connection between XML file/SpringContainer and JavaPackage-->
-<!--    Add connection for @Value and FILE-->
     <context:component-scan base-package="org.annotation"/>
-    <context:property-placeholder
-            location="classpath:myApp.properties"/>
+
 
 </beans>

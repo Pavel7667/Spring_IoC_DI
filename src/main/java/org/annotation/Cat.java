@@ -1,5 +1,6 @@
 package org.annotation;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 // default Bean name Cat -> cat // SQLTest -> SQLTest ,same
 @Component("catBean")
+@Scope("prototype")
 public class Cat implements Pet {
 
     // Detect message to show that bean is creating
