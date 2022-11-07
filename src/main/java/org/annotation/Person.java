@@ -2,10 +2,8 @@ package org.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component("personBean")
+//@Component("personBean")
 public class Person {
 
     //    @Autowired
@@ -22,7 +20,7 @@ public class Person {
 // But if use @Qualifier into parameter
 
     @Autowired
-    public Person(@Qualifier("dogBean") Pet pet) {
+    public Person(@Qualifier("catBean") Pet pet) {
         this.pet = pet;
     }
 
