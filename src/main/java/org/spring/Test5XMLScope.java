@@ -16,8 +16,12 @@ public class Test5XMLScope {
 
         //This links pointing in one Object
         boolean isSingeltone = myDog == yourDog;
+        myDog.setName("isSingeltone or Prototype");
+        yourDog.setName("Singeltone re_write in One object Value");
 
         System.out.println(isSingeltone);
+        System.out.println(myDog.getName());
+        System.out.println(yourDog.getName());
 
 
     }

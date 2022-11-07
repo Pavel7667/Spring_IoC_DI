@@ -11,7 +11,7 @@
 <!--    Set scope    -->
     <bean id="myPet"
           class="org.spring.Dog"
-          scope="singleton">
+          scope="prototype">
     </bean>
 
 </beans>
