@@ -13,6 +13,7 @@ public class Test4 {
         // parameters in Constructor
         Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
+        System.out.println(person);
 
         context.close();
     }

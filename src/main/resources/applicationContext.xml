@@ -22,11 +22,14 @@
 
     </bean>
 
-    <!--setting in Bean Constructor parameters Link to another object/bean -->
+    <!--Setting Using setters in Bean Value in his fields  -->
 
     <bean id="myPerson"
           class="org.spring.Person">
-        <constructor-arg ref="myPetCat"/>
+        <property name="pet" ref="myPetCat"/>
+        <property name="age" value="12"/>
+        <property name="name" value="12"/>
+
     </bean>
 
 </beans>
