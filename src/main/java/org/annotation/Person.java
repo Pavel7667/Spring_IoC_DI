@@ -5,7 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component("personBean")
 public class Person {
-
+    /**
+     * Change XML_Configuration to @Annotation_Configuration
+     * Here we set in Bean "personBean" any Bean with Pet implementation
+     */
+    @Autowired
     private Pet pet;
     private String name;
     private int age;
@@ -19,17 +23,12 @@ public class Person {
         System.out.println("Detect message Person");
     }
 
-    /**
-     * Change XML_Configuration to @Annotation_Configuration
-     * Here we set in Bean "personBean" any Bean with Pet implementation
-     * @param pet
-     */
-    @Autowired
-    public void setPet(Pet pet) {
-        System.out.println("Setting using Setter and Constructor are same, " +
-                "just use @Autowired");
-        this.pet = pet;
-    }
+
+//    public void setPet(Pet pet) {
+//        System.out.println("Setting using Setter and Constructor are same, " +
+//                "just use @Autowired");
+//        this.pet = pet;
+//    }
 
     public void callYourPet() {
         System.out.println("hi pet");
