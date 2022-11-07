@@ -8,16 +8,25 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-<!--    creating bean with LINK = id + set class.path to this object = Dog -->
+    <!--    creating bean with LINK = id + set class.path to this object = Dog -->
 
     <bean id="myPetDog"
           class="org.spring.Dog">
 
     </bean>
 
+    <!--    more bean -->
+
     <bean id="myPetCat"
           class="org.spring.Cat">
 
+    </bean>
+
+    <!--setting in Bean Constructor parameters Link to another object/bean -->
+
+    <bean id="myPerson"
+          class="org.spring.Person">
+        <constructor-arg ref="myPetCat"/>
     </bean>
 
 </beans>
