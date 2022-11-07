@@ -6,25 +6,26 @@ import org.springframework.stereotype.Component;
 
 @Component("personBean")
 public class Person {
-    // @Autowired with more than one @Component
-    // @Qualifier("linkToAnotherSpecificComponent")
-    @Autowired
-    @Qualifier("dogBean")
+
+//    @Autowired
+//    @Qualifier("dogBean")
     private Pet pet;
     private String name;
     private int age;
 
-    // Changing ConfigFile xml
-//    public Person(Pet pet) {
-//        this.pet = pet;
-//    }
+//    @Autowired work Single
+//    @Qualifier("dogBean") NOO Combine
+    public Person(Pet pet) {
+        this.pet = pet;
+    }
 
     public Person() {
         System.out.println("Detect message Person");
     }
 
 
-
+//    @Autowired
+//    @Qualifier("dogBean")
     public void setPet(Pet pet) {
         System.out.println("Setting using Setter and Constructor are same, " +
                 "just use @Autowired");
@@ -35,9 +36,6 @@ public class Person {
         System.out.println("hi pet");
         pet.say();
     }
-
-    // name -> setName
-    // ref name = Spring magick = set + ref(name->Name) = setName
 
     public void setName(String name) {
         System.out.println("Showing that methods starts first in " +
