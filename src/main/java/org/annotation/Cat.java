@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
  * @Component = say that from this Class will be creating Beans
  * @Component("catBean") = give id name for this Beans
  */
+
+// default Bean name Cat -> cat // SQLTest -> SQLTest ,same
 @Component("catBean")
 public class Cat implements Pet {
 
