@@ -12,9 +12,9 @@ public class Person {
 //    @Qualifier("dogBean")
     private Pet pet;
 
-    @Value("Set default value don`t using setters")
+    @Value("${person.name}")
     private String name;
-    @Value("123456789")
+    @Value("${person.age}")
     private int age;
 
 //    @Autowired work Single
