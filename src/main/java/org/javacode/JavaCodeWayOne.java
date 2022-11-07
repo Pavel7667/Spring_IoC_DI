@@ -10,10 +10,8 @@ public class JavaCodeWayOne {
                 new AnnotationConfigApplicationContext(MyConfig.class);
 
 
-        Cat cat = context.getBean("catBean", Cat.class);
-        cat.say();
         Person person = context.getBean("personBean", Person.class);
-        person.callYourPet();
+        System.out.println(person);
 
         context.close();
     }

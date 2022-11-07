@@ -3,11 +3,13 @@ package org.javacode;
 import org.springframework.context.annotation.Bean;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * Using JavaCode without XML_file
  */
 @Configuration
+@PropertySource("myApp.properties")
 //@ComponentScan("org.javacode")
 // Use MyConfig class as XML_file and creat all Beans here
 public class MyConfig {
