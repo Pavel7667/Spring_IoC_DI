@@ -1,15 +1,15 @@
 package org.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("personBean")
 public class Person {
-    /**
-     * Change XML_Configuration to @Annotation_Configuration
-     * Here we set in Bean "personBean" any Bean with Pet implementation
-     */
+    // @Autowired with more than one @Component
+    // @Qualifier("linkToAnotherSpecificComponent")
     @Autowired
+    @Qualifier("dogBean")
     private Pet pet;
     private String name;
     private int age;
@@ -24,11 +24,12 @@ public class Person {
     }
 
 
-//    public void setPet(Pet pet) {
-//        System.out.println("Setting using Setter and Constructor are same, " +
-//                "just use @Autowired");
-//        this.pet = pet;
-//    }
+
+    public void setPet(Pet pet) {
+        System.out.println("Setting using Setter and Constructor are same, " +
+                "just use @Autowired");
+        this.pet = pet;
+    }
 
     public void callYourPet() {
         System.out.println("hi pet");
@@ -37,6 +38,7 @@ public class Person {
 
     // name -> setName
     // ref name = Spring magick = set + ref(name->Name) = setName
+
     public void setName(String name) {
         System.out.println("Showing that methods starts first in " +
                 "applicationContext");

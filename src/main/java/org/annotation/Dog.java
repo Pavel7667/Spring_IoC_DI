@@ -1,9 +1,12 @@
 package org.annotation;
 
 
+import org.springframework.stereotype.Component;
+
 /**
  * Class with common Interface
  */
+@Component("dogBean")
 public class Dog implements Pet {
 
 //    private String name;
