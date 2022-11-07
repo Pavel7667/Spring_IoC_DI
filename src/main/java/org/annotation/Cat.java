@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  */
 
 // default Bean name Cat -> cat // SQLTest -> SQLTest ,same
-//@Component("catBean")
+@Component("catBean")
 public class Cat implements Pet {
 
     // Detect message to show that bean is creating

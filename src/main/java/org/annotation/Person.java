@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component("personBean")
 public class Person {
 
-//    @Autowired
+    //    @Autowired
 //    @Qualifier("dogBean")
     private Pet pet;
     private String name;
@@ -15,7 +15,10 @@ public class Person {
 
 //    @Autowired work Single
 //    @Qualifier("dogBean") NOO Combine
-    public Person(Pet pet) {
+// But if use @Qualifier into parameter
+
+    @Autowired
+    public Person(@Qualifier("dogBean") Pet pet) {
         this.pet = pet;
     }
 
@@ -24,7 +27,7 @@ public class Person {
     }
 
 
-//    @Autowired
+    //    @Autowired
 //    @Qualifier("dogBean")
     public void setPet(Pet pet) {
         System.out.println("Setting using Setter and Constructor are same, " +
