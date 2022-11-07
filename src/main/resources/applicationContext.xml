@@ -10,8 +10,13 @@
 
 <!--    creating bean with LINK = id + set class.path to this object = Dog -->
 
-    <bean id="myPet"
+    <bean id="myPetDog"
           class="org.spring.Dog">
+
+    </bean>
+
+    <bean id="myPetCat"
+          class="org.spring.Cat">
 
     </bean>
 

@@ -12,8 +12,11 @@ public class Test2 {
 
         // getting from  Spring Container  object = Dog
         // Pet is common interface  context.getBean using reflection
-        Pet pet = context.getBean("myPet", Pet.class);
-        pet.say();
+        Pet petDog = context.getBean("myPetDog", Pet.class);
+        Pet petCat = context.getBean("myPetCat", Pet.class);
+
+        petDog.say();
+        petCat.say();
 
         context.close();
     }
