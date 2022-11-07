@@ -26,6 +26,8 @@ public class Person {
      */
     @Autowired
     public void setPet(Pet pet) {
+        System.out.println("Setting using Setter and Constructor are same, " +
+                "just use @Autowired");
         this.pet = pet;
     }
 
